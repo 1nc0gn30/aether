@@ -2,6 +2,7 @@ import { Outlet, NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { Hexagon, Eye, Database, Radio, CircleDashed } from 'lucide-react';
 import { cn } from '../lib/utils';
+import AmbientPlayer from './AmbientPlayer';
 
 const navItems = [
   { path: '/', icon: Hexagon, label: 'NEXUS' },
@@ -25,6 +26,7 @@ export default function Layout() {
 
       <AnimatePresence mode="wait">
         <motion.main
+          data-scroll-shell="true"
           key={location.pathname}
           initial={{ opacity: 0, filter: 'blur(10px)', scale: 0.98 }}
           animate={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
@@ -35,6 +37,8 @@ export default function Layout() {
           <Outlet />
         </motion.main>
       </AnimatePresence>
+
+      <AmbientPlayer />
 
       {/* Floating Navigation */}
       <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1.5rem)] max-w-3xl">

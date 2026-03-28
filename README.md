@@ -8,10 +8,11 @@ It focuses on browser-native visual/audio interaction patterns (Canvas + Web Aud
 ## What It Includes
 
 1. `NEXUS` (`/`): Canvas particle network with pointer interaction.
-2. `ORACLE` (`/oracle`): Interactive card-reading UI with tilt/flip/draggable cards.
-3. `ARCHIVE` (`/archive`): Searchable, filterable memory records with animated reveal states.
+2. `ORACLE` (`/oracle`): Interactive card-reading UI with tilt/flip/draggable cards and regenerated readings per draw.
+3. `ARCHIVE` (`/archive`): Searchable, filterable memory records with expanded dataset, inspector panel, and UI sound cues.
 4. `SYNTHESIZER` (`/synthesizer`): Playable frequency grid (mouse/keyboard) with real-time visualizer.
 5. `VOID` (`/void`): Breath pacing loop with interactive trail canvas.
+6. Global `Audio` panel: Optional YouTube ambient stream (song/playlist URL) and SFX on/off toggle.
 
 ## Tech Stack
 
